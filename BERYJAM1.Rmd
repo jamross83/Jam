@@ -6,6 +6,12 @@ date: "2025-10-31"
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(viridis)
+library(janitor)
+library(grid)
+library(tidyverse)
+library(dplyr)
 ```
 
 ## R Markdown
@@ -26,6 +32,19 @@ You can also embed plots, for example:
 croc <- read.csv("crocodile_dataset.csv")
 data.frame(croc)
 
+ages <- c("Hatchling", "Juvenile", "Subadult", "Adult")
+ageorder<- factor(croc$Age.Class, levels = ages)
+
+
+"Observed Length (m)" <- croc$Observed.Length..m.
+
+ggplot(croc, aes(x = Genus, y = ageorder, fill = `Observed Length (m)`)) +
+  geom_tile(color = "white") +
+  scale_fill_gradient(low = "white", high = "dark green") +
+  xlab("Crocodile Genus")+
+  ylab("Age Estimate")+
+  ggtitle("Crocodile Observed Lengths per age within Genus") +
+  theme_bw()
 
 ```
 
