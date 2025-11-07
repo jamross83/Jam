@@ -1,5 +1,7 @@
 ---
 title: "PROJ 2"
+names: James Ross and Berenice Gonzalez 
+class: 02
 output: html_document
 date: "2025-10-31"
 ---
@@ -40,7 +42,7 @@ ageorder<- factor(croc$Age.Class, levels = ages)
 
 ggplot(croc, aes(x = Genus, y = ageorder, fill = `Observed Length (m)`)) +
   geom_tile(color = "white") +
-  scale_fill_gradient(low = "white", high = "dark green") +
+  scale_fill_gradient(low = "white", high = "darkgreen") +
   xlab("Crocodile Genus")+
   ylab("Age Estimate")+
   ggtitle("Crocodile Observed Lengths per age within Genus") +
@@ -70,14 +72,14 @@ for (g in unique(croc$Genus)) {
 
 ggplot(croc, aes(x = Genus, y = ageorder, fill = Observed.Length..m.)) +
   geom_tile(color = "white") +
-  scale_fill_gradient(low = "white", high = "dark green") +
+  scale_fill_gradient(low = "white", high = "darkgreen") +
   xlab("Crocodile Genus") +
   ylab("Age Estimate") +
   ggtitle("Crocodile Observed Lengths per Age within Genus") +
   theme_bw()
 
+
 ```
-^ idk if this is right james but i addded the loop and it seems to run, but i feel like the graph looks off, lmk what u think 
 
 
 
