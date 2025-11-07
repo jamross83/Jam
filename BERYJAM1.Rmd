@@ -29,7 +29,7 @@ summary(cars)
 You can also embed plots, for example:
 
 ```{r JAM}
-croc <- read.csv("crocodile_dataset.csv")
+croc <- read.csv("Data/crocodile_dataset.csv")
 data.frame(croc)
 
 ages <- c("Hatchling", "Juvenile", "Subadult", "Adult")
@@ -50,7 +50,7 @@ ggplot(croc, aes(x = Genus, y = ageorder, fill = `Observed Length (m)`)) +
 
 ```{r}
 
-croc <- read.csv("crocodile_dataset.csv")
+croc <- read.csv("Data/crocodile_dataset.csv")
 data.frame(croc)
 
 ages <- c("Hatchling", "Juvenile", "Subadult", "Adult")
@@ -59,6 +59,14 @@ ageorder <- factor(croc$Age.Class, levels = ages)
 for (g in unique(croc$Genus)) {
   avg_length <- mean(croc$Observed.Length..m.[croc$Genus == g], na.rm = TRUE)
   print(paste("Average observed length for", g, ":", round(avg_length, 2), "m"))}
+
+  if (avg_length > 3) {
+    print(paste(g, "are large crocodiles with an average length of", round(avg_length, 2), "m."))
+  } else if (avg_length > 2) {
+    print(paste(g, "are medium-sized crocodiles with an average length of", round(avg_length, 2), "m."))
+  } else {
+    print(paste(g, "are relatively small crocodiles with an average length of", round(avg_length, 2), "m."))
+  }
 
 ggplot(croc, aes(x = Genus, y = ageorder, fill = Observed.Length..m.)) +
   geom_tile(color = "white") +
