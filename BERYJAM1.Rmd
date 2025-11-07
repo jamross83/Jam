@@ -70,7 +70,7 @@ for (g in unique(croc$Genus)) {
     print(paste(g, "are relatively small crocodiles with an average length of", round(avg_length, 2), "m."))
   }
 
-ggplot(croc, aes(x = Genus, y = ageorder, fill = Observed.Length..m.)) +
+ggplot(croc, aes(x = Genus, y = ageorder, fill = `Observed Length (m)`)) +
   geom_tile(color = "white") +
   scale_fill_gradient(low = "white", high = "darkgreen") +
   xlab("Crocodile Genus") +
