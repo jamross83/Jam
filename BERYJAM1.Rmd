@@ -76,10 +76,6 @@ ggplot(croc, aes(x = Genus, y = ageorder, fill = Observed.Length..m.)) +
   ggtitle("Crocodile Observed Lengths per Age within Genus") +
   theme_bw()
 
-
-
-
-
 ```
 ^ idk if this is right james but i addded the loop and it seems to run, but i feel like the graph looks off, lmk what u think 
 
