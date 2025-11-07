@@ -84,7 +84,7 @@ ggplot(croc, aes(x = Genus, y = ageorder, fill = `Observed Length (m)`)) +
 
 #SUMMARY
 
-
+we added a loop with 3 eleemnts the elements begin the 3 genuses,and then we added a conditional if that print sthe average observed length for eahc type of croc goign from large, medium, small 
 
 
 
