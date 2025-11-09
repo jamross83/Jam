@@ -84,7 +84,7 @@ ggplot(croc, aes(x = Genus, y = ageorder, fill = `Observed Length (m)`)) +
 
 #SUMMARY
 
-we added a loop with 3 eleemnts the elements begin the 3 genuses,and then we added a conditional if that print sthe average observed length for eahc type of croc goign from large, medium, small 
+For our project, we worked with a dataset containing information on crocodile genera, age classes, and observed lengths. We organized the age groups, which were the Hatchling, Juvenile, Subadult, Adult age groups and added a loop with three elements representing the three genera in the dataset. Inside the loop, we used a conditional statement to print the average observed length for each type of crocodile, categorizing them as large, medium, or small based on their average size. We then created a ggplot2 heatmap to visualize the observed lengths across different age classes and genera, using a color gradient to highlight size differences. This allowed us to both analyze and visually compare crocodile growth patterns among species.
 
 
 
