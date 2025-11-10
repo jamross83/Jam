@@ -30,7 +30,7 @@ When you click the **Knit** button a document will be generated that includes bo
 
 You can also embed plots, for example:
 
-```{r JAM}
+```{r Original Graph Draft(ignore)}
 croc <- read.csv("Data/crocodile_dataset.csv")
 data.frame(croc)
 
@@ -50,7 +50,7 @@ ggplot(croc, aes(x = Genus, y = ageorder, fill = `Observed Length (m)`)) +
 
 ```
 
-```{r}
+```{r Project 2 Draft}
 
 croc <- read.csv("Data/crocodile_dataset.csv")
 data.frame(croc)
