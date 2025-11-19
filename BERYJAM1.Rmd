@@ -52,7 +52,6 @@ ggplot(croc, aes(x = Genus, y = ageorder, fill = `Observed Length (m)`)) +
 ```{r Project 2 Draft}
 
 croc <- read.csv("Data/crocodile_dataset.csv")
-data.frame(croc)
 
 ages <- c("Hatchling", "Juvenile", "Subadult", "Adult")
 ageorder <- factor(croc$Age.Class, levels = ages)
