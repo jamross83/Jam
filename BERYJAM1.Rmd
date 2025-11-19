@@ -32,7 +32,6 @@ You can also embed plots, for example:
 
 ```{r Original Graph Draft(ignore)}
 croc <- read.csv("Data/crocodile_dataset.csv")
-data.frame(croc)
 
 ages <- c("Hatchling", "Juvenile", "Subadult", "Adult")
 ageorder<- factor(croc$Age.Class, levels = ages)
