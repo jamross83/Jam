@@ -50,6 +50,7 @@ croc <- read.csv("Data/crocodile_dataset.csv")
 
 ages <- c("Hatchling", "Juvenile", "Subadult", "Adult")
 ageorder <- factor(croc$Age.Class, levels = ages)
+"Observed Length (m)" <- croc$Observed.Length..m.
 
 for (g in unique(croc$Genus)) {
   avg_length <- mean(croc$Observed.Length..m.[croc$Genus == g], na.rm = TRUE)
@@ -74,9 +75,9 @@ ggplot(croc, aes(x = Genus, y = ageorder, fill = `Observed Length (m)`)) +
 
 croc$Size.Score <- ifelse(croc$Observed.Length..m. > 3, 3,
                      ifelse(croc$Observed.Length..m. > 2, 2, 1))
+Sizes <- croc$Size.Score
 
-
-ggplot(croc, aes(x = Genus, y = ageorder, fill = Size.Score)) +
+ggplot(croc, aes(x = Genus, y = ageorder, fill = Sizes)) +
   geom_tile(color = "black") +
   scale_fill_gradient(low = "tan", high = "darkgreen") +
   xlab("Crocodile Genus") +
