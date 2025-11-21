@@ -1,10 +1,13 @@
----
-title: "PROJ 2 Final"
-names: James Ross and Berenice Gonzalez 
-class: 02
+
+title: "PROJECT 2: Crocodile Data Analysis"
+author: "James Ross and Berenice Gonzalez"
+subtitle:"CPSC 292 Section 02"
+>>>>>>> 72234e6b41277fee8d78485509e94984a99c1807
 output: html_document
 date: "2025-10-31"
 ---
+
+## libraries and functions
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -16,19 +19,8 @@ library(tidyverse)
 library(dplyr)
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r}
-
-```
-
-## Including Plots
-
-You can also embed plots, for example:
+## Figures
 
 ```{r Original Graph Draft(ignore)}
 croc <- read.csv("Data/crocodile_dataset.csv")
@@ -49,7 +41,10 @@ ggplot(croc, aes(x = Genus, y = ageorder, fill = `Observed Length (m)`)) +
 
 ```
 
-```{r Project 2 Draft}
+
+## Final Project 2 Graphics
+
+```{r Project 2}
 
 croc <- read.csv("Data/crocodile_dataset.csv")
 
