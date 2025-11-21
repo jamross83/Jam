@@ -1,5 +1,5 @@
 ---
-title: "PROJ 2"
+title: "PROJ 2 Final"
 names: James Ross and Berenice Gonzalez 
 class: 02
 output: html_document
