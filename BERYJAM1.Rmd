@@ -53,7 +53,8 @@ ageorder <- factor(croc$Age.Class, levels = ages)
 
 for (g in unique(croc$Genus)) {
   avg_length <- mean(croc$Observed.Length..m.[croc$Genus == g], na.rm = TRUE)
-  print(paste("Average observed length for", g, ":", round(avg_length, 2), "m"))}
+  print(paste("Average observed length for", g, ":", round(avg_length, 2), "m"))
+}
 
   if (avg_length > 3) {
     print(paste(g, "are large crocodiles with an average length of", round(avg_length, 2), "m."))
@@ -70,6 +71,20 @@ ggplot(croc, aes(x = Genus, y = ageorder, fill = `Observed Length (m)`)) +
   ylab("Age Estimate") +
   ggtitle("Crocodile Observed Lengths per Age within Genus") +
   theme_bw()
+
+croc$Size.Score <- ifelse(croc$Observed.Length..m. > 3, 3,
+                     ifelse(croc$Observed.Length..m. > 2, 2, 1))
+
+
+ggplot(croc, aes(x = Genus, y = ageorder, fill = Size.Score)) +
+  geom_tile(color = "black") +
+  scale_fill_gradient(low = "tan", high = "darkgreen") +
+  xlab("Crocodile Genus") +
+  ylab("Age Estimate") +
+  ggtitle("Crocodile Observed Sizes per Age within Genus") +
+  theme_bw()
+
+
 
 
 ```
